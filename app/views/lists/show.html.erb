@@ -6,6 +6,8 @@
     <% end %>
   </div>
   <div class="cards mb-5">
+    <%#= image_tag source, alt: "text" %>
+    <%= cl_image_tag @list.photo.key %>
     <% @list.bookmarks.each do |bookmark| %>
       <div class="card" style="width: 18rem;">
         <%= image_tag bookmark.movie.poster_url, alt: "text" %>
