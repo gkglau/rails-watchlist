@@ -1,0 +1,5 @@
+[ ] - As a user, I can see all my lists
+[ ] - As a user, I can create a list
+[ ] - As a user, I can see the details of a list
+[ ] - As a user, I can bookmark a movie inside a list
+[ ] - As a user, I can destroy a bookmark
