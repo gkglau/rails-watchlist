@@ -1,5 +1,8 @@
 <div class="container mt-5">
   <div class="d-flex justify-content-between align-items-end">
+  <%= link_to lists_path, class: "btn btn-secondary" do %>
+    <i class="fa-solid fa-house"></i>
+  <% end %>
     <h1><%= @list.name %></h1>
     <%= link_to new_list_bookmark_path(@list), class: "btn btn-primary" do %>
       <i class="fa-solid fa-plus"></i>
@@ -7,7 +10,13 @@
   </div>
   <div class="cards mb-5">
     <%#= image_tag source, alt: "text" %>
-    <%= cl_image_tag @list.photo.key %>
+<% if @list.photo.attached? %>
+  <%= cl_image_tag @list.photo.key,
+      width: 500,
+      height: 400,
+      crop: :fill,
+      class: "img-fluid" %>
+<% end %>
     <% @list.bookmarks.each do |bookmark| %>
       <div class="card" style="width: 18rem;">
         <%= image_tag bookmark.movie.poster_url, alt: "text" %>
@@ -18,7 +27,4 @@
       </div>
     <% end %>
   </div>
-  <%= link_to lists_path, class: "btn btn-secondary" do %>
-    <i class="fa-solid fa-house"></i>
-  <% end %>
 </div>
