@@ -19,7 +19,7 @@
 
   <div class="cards mb-5">
     <% @list.bookmarks.each do |bookmark| %>
-      <div class="card" style="width: 16rem; border-radius: 1rem;">
+      <div class="card" style="width: 18rem; border-radius: 1rem;">
         <%= image_tag bookmark.movie.poster_url, alt: "text" %>
         <div class="card-body">
           <h5 class="card-title"><%= bookmark.movie.title %></h5>
