@@ -68,3 +68,4 @@ gem "rspec-rails", group: [ :test ]
 gem "sassc-rails"
 gem "simple_form"
 gem "sprockets-rails"
+gem "dotenv-rails", group: [ :development, :test ]
